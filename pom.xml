@@ -75,6 +75,7 @@
 	<modules>
 		<module>bom-dependency-management</module>
 		<module>cxf-rest-blueprint</module>
+		<module>rest-dsl-blueprint</module>
 	</modules>
 
 </project>
