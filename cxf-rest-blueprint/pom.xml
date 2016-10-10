@@ -12,10 +12,6 @@
 	<dependencies>
 		<!-- fabric/fuse/camel components -->
 		<dependency>
-			<groupId>io.fabric8</groupId>
-			<artifactId>fabric-cxf</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-core</artifactId>
 		</dependency>
@@ -26,6 +22,10 @@
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-cxf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.fabric8</groupId>
+			<artifactId>fabric-cxf</artifactId>
 		</dependency>
 	</dependencies>
 
