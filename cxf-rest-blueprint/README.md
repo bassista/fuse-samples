@@ -63,7 +63,7 @@ In addition, we also need to add the OSGi dependency ```io.fabric8.cxf``` like t
 	</build>
 ```
 
-finall, add the following to the blueprint:
+finally, add the following to the blueprint:
 ```xml	<reference id="curator" interface="org.apache.curator.framework.CuratorFramework" />
 
 	<bean id="fabricLoadBalancerFeature" class="io.fabric8.cxf.FabricLoadBalancerFeature">
