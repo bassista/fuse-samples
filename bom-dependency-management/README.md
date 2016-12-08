@@ -5,12 +5,12 @@ the dependencies of bundles and jars distributed with JBoss Fuse. This
 ensures that the correct (supported) version of bundles are used in your
 projects.
 
-To take advantage of the BOM, add the jboss-fuse-parent POM as a dependency
+To take advantage of the BOM, add the ```jboss-fuse-parent``` POM as a dependency
 in the dependencyManagement POM entry:
 
 ```xml
 	<properties>
-		<jboss.fuse.version>6.2.1.redhat-117</jboss.fuse.version>
+		<jboss.fuse.version>6.3.0.redhat-187</jboss.fuse.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>

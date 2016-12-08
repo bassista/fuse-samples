@@ -69,7 +69,7 @@
 	</build>
 
 	<properties>
-		<jboss.fuse.version>6.2.1.redhat-159</jboss.fuse.version>
+		<jboss.fuse.version>6.3.0.redhat-187</jboss.fuse.version>
 	</properties>
 
 	<modules>
