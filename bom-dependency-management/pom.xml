@@ -11,6 +11,9 @@
 	<artifactId>bom-dependency-management</artifactId>
 	<packaging>bundle</packaging>
 	<dependencies>
+		<!-- fuse/camel components -->
+		<!-- notice that we don't specify version here, it's inferred from the 
+			BOM we imported in the parent project -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-core</artifactId>
