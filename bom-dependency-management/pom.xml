@@ -11,9 +11,6 @@
 	<artifactId>bom-dependency-management</artifactId>
 	<packaging>bundle</packaging>
 	<dependencies>
-		<!-- fuse/camel components -->
-		<!-- notice that we don't specify version here, it's inferred from the 
-			BOM we imported in the parent project -->
 		<dependency>
 			<groupId>org.apache.camel</groupId>
 			<artifactId>camel-core</artifactId>
@@ -33,7 +30,7 @@
 				<configuration>
 					<instructions>
 						<Include-Resource>src/main/resources</Include-Resource>
-						<Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Import-Package>*</Import-Package>
 					</instructions>
 				</configuration>

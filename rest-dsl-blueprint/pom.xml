@@ -20,18 +20,6 @@
 			<artifactId>camel-servlet</artifactId>
 		</dependency>
 	</dependencies>
-	<repositories>
-		<repository>
-			<id>camelStaging</id>
-			<url>https://repository.jboss.org/nexus/content/repositories/fusesource_releases_external-2384</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>camelStaging</id>
-			<url>https://repository.jboss.org/nexus/content/repositories/fusesource_releases_external-2384</url>
-		</pluginRepository>
-	</pluginRepositories>
 	<build>
 		<plugins>
 			<plugin>
@@ -42,7 +30,7 @@
 				<configuration>
 					<instructions>
 						<Include-Resource>src/main/resources</Include-Resource>
-						<Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Private-Package>fuse.sample.restdsl.*</Private-Package>
 						<Import-Package>*</Import-Package>
 					</instructions>

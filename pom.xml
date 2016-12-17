@@ -76,6 +76,7 @@
 		<module>bom-dependency-management</module>
 		<module>cxf-rest-blueprint</module>
 		<module>rest-dsl-blueprint</module>
+		<module>encrypted-properties</module>
 	</modules>
 
 </project>
