@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+    xmlns:camel="http://camel.apache.org/schema/blueprint"
+    xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0"
+    xmlns:enc="http://karaf.apache.org/xmlns/jasypt/v1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0 https://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd           http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd    http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.0.0 http://aries.apache.org/schemas/blueprint-cm/blueprint-cm-1.0.0.xsd">
+    <cm:property-placeholder
+        id="property-placeholder-6915a88b-e0a0-4cc5-9e56-31d2d4f494a1" persistent-id="fuse.sample.dummy.datasource"/>
+    <enc:property-placeholder id="property-placeholder-a635da11-12b3-4ad1-912b-ce607869fa50">
+        <enc:encryptor class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+            <property name="config">
+                <bean class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+                    <property name="algorithm" value="PBEWITHSHA1ANDRC4_128"/>
+                    <property name="passwordEnvName" value="JASYPT_ENCRYPTION_PASSWORD"/>
+                </bean>
+            </property>
+        </enc:encryptor>
+    </enc:property-placeholder>
+    <bean class="fuse.sample.props.DummyDatasource" id="props">
+        <property name="url" value="${url}"/>
+        <property name="username" value="${username}"/>
+        <property name="password" value="${password}"/>
+    </bean>
+    <camelContext id="camelContext-39be92ec-4d5d-4d46-acaa-65a2dadc025d" xmlns="http://camel.apache.org/schema/blueprint">
+        <route id="_route1">
+            <from id="_from1" uri="timer://dummyTimer1?period=5000&amp;repeatCount=1"/>
+            <setBody id="_setBody1">
+                <simple>ref:props</simple>
+            </setBody>
+            <log id="_log1" message="${body}"/>
+        </route>
+    </camelContext>
+</blueprint>
