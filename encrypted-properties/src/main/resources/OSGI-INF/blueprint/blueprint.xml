@@ -11,7 +11,7 @@
             <property name="config">
                 <bean class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
                     <property name="algorithm" value="PBEWITHSHA1ANDRC4_128"/>
-                    <property name="passwordEnvName" value="JASYPT_ENCRYPTION_PASSWORD"/>
+                    <property name="passwordEnvName" value="JASYPT_ENCRYPTION_KEY"/>
                 </bean>
             </property>
         </enc:encryptor>

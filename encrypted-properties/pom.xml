@@ -40,7 +40,7 @@
 						<Import-Package>
 							org.jasypt.encryption.pbe,
 							org.jasypt.encryption.pbe.config,
-							*
+							org.osgi.service.blueprint
 						</Import-Package>
 					</instructions>
 				</configuration>
