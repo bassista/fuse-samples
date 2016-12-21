@@ -36,8 +36,9 @@ and import the jasypt packages...
 						<Include-Resource>src/main/resources</Include-Resource>
 						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
 						<Import-Package>
-							org.jasypt.encryption.*,
-							org.osgi.service.blueprint.*
+							org.jasypt.encryption.pbe,
+							org.jasypt.encryption.pbe.config,
+							org.osgi.service.blueprint
 						</Import-Package>
 					</instructions>
 				</configuration>
@@ -92,6 +93,5 @@ Now, start JBoss Fuse like this (Linux, bash):
 ```
 (export JASYPT_ENCRYPTION_KEY=secret88; bin/fuse)
 ```
-and see check the logs for to find the secret password.
-
+and check the logs for to find the secret password. (Hint: search for "_route1")
 
